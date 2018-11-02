@@ -10,47 +10,18 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script>
-        $(function () {
-            // 設定遮罩的透明度及寬高, 位移縮放值
-            var _overlayOpacity = 0.5,
-                _zoomWidthDiff = 25,
-                _zoomHeightDiff = 20,
-                _marginTopDiff = -5,
-                _marginLeftDiff = -5;
-            $('a.abgne-zoom-out').each(function () {
-                // 先取得圖片及移除包裹圖的超連結
-                // 並重新加上新的外框及產生超連結遮罩
-                var $this = $(this),
-                    $img = $this.find('img').unwrap(),
-                    $frame = $img.wrap('<div class="abgne-frame-20120208"></div>').parents('.abgne-frame-20120208'),
-                    $overlay = $('<a target="_blank" href="' + $this.attr('href') + '" class="overlay"></a>').css('opacity', _overlayOpacity);
-                $frame.css({
-                    width: $img.width(),
-                    height: $img.height()
-                }).append($overlay);
-                // 當滑鼠移入及移出遮罩時
-                $overlay.hover(function () {
-                    $img.stop(false, true).animate({
-                        width: '+=' + _zoomWidthDiff + 'px',
-                        height: '+=' + _zoomHeightDiff + 'px',
-                        marginTop: _marginTopDiff,
-                        marginLeft: _marginLeftDiff
-                    });
-
-                    $(this).stop(false, true).animate({
-                        opacity: 0
-                    });
-                }, function () {
-                    $img.stop(false, true).animate({
-                        width: '-=' + _zoomWidthDiff + 'px',
-                        height: '-=' + _zoomHeightDiff + 'px',
-                        marginTop: 0,
-                        marginLeft: 0
-                    });
-                    // 遮罩變成完全指定透明度
-                    $(this).stop(false, true).animate({
-                        opacity: _overlayOpacity
-                    });
+        //滑鼠挪上後，圖片放大、縮小
+        $(document).ready(function () {
+            $("img#aa").mouseenter(function () {
+                $(this).animate({
+                    opacity: '0.5',
+                    width: '510'
+                });
+            });
+            $("img#aa").mouseleave(function () {
+                $(this).animate({
+                    opacity: '1.0',
+                    width: '500'
                 });
             });
         });
@@ -60,10 +31,10 @@
             padding-top: 50px;
         }
 
-        img {
+      /*  img {
             max-width: 100%;
             height: auto;
-        }
+        }*/
         #Top {
             background-color: black;
             text-align: center;
@@ -144,20 +115,7 @@
                 background-color: #f4511e;
             }
 
-        .abgne-frame-20120208 {
-            position: relative;
-            overflow: hidden;
-        }
-
-            .abgne-frame-20120208 .overlay {
-                display: block;
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                top: 0;
-                left: 0;
-                /*background-color: #000;  遮罩的顏色 */
-            }
+       
     </style>
 
 </head>
@@ -229,8 +187,8 @@
         <div class="row" >
             <div class="col-sm-1 "></div>
             <div class="col-sm-5">
-                <a class="abgne-zoom-out" href="https://www.fate-go.jp/world/eor/">
-                    <img src="img/FGO1.5.png" title="" width="500" height="300" />
+                <a target="_blank" href="https://www.fate-go.jp/world/eor/">
+                    <img id="aa" src="img/FGO1.5.png" title="" width="500" />
                 </a>
             </div>
             <div id="1_5" class="col-sm-5">
@@ -270,8 +228,8 @@
                     </p>
                 </div>
                 <div class="col-sm-5">
-                    <a class="abgne-zoom-out" href="https://www.fate-go.jp/world/cil/">
-                        <img src="img/FGO2.jpg" title="" width="500" height="300" />
+                    <a target="_blank" href="https://www.fate-go.jp/world/cil/">
+                        <img id="aa" src="img/FGO2.jpg" title="" width="500" />
                     </a>
                 </div>
                 <div class="col-sm-1"></div>
