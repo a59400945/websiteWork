@@ -64,17 +64,31 @@
             max-width: 100%;
             height: auto;
         }
-        #Story {
-             background-color: black;
-             text-shadow: 5px 5px 3px red;
-             padding: 50px;
+        #Top {
+            background-color: black;
+            text-align: center;
+            color: white; 
+            font-style:italic;
+            font-weight:800;
+            text-shadow: 5px 5px 3px blue;
+        }
+            #Top img {
+                border-radius: 150px;
+                width: 1024px;
+             }
+         #Story {
+            background-color: black;
+            text-shadow: 5px 5px 3px red;
+            padding: 50px;
+            text-align: center;
         }
         #NewStory {
             background-image: url(img/bg3.jpg);
             background-size: cover;
-            color: white; 
-            text-shadow: 5px 5px 3px red ;
+            color: white;
+            text-shadow: 5px 5px 3px red;
             padding: 50px;
+            text-align: center;
         }
         #Chapter {
             background-color:black;
@@ -85,16 +99,21 @@
                 margin:0px;
             }
         #Staff {
-            padding: 30px; 
-            background-image: url(img/bg2.jpg); 
-            color: white; 
+            padding: 30px;
+            background-image: url(img/bg2.jpg);
+            color: white;
             text-shadow: 5px 5px 3px blue;
+            text-align: center;
         }
             #Staff h2 h4 {
                 font-weight: 800;
             }
-            
-        
+
+        .navbar {
+            margin:0px ;
+            padding:3px;
+            letter-spacing:3px;
+        }
          .navbar-center {
             display: inline-block;
             float: none;
@@ -145,7 +164,7 @@
 <body>
 
     <!--頂端選單-->
-    <nav class="navbar navbar-inverse navbar-fixed-top " style="margin:0px ;padding:3px;letter-spacing:3px">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid ">
             <div class="navbar-header ">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -181,12 +200,12 @@
 
 
 
-    <div id="Top" class="container-fluid  text-center" style="background-color: black">
+    <div id="Top" class="container-fluid">
 
-        <img src="img/FGO.png" style="border-radius:150px; width: 1024px; " class=" img-round center-block">
-        <h1 style="color: white; font-style:italic;font-weight:800;text-shadow: 5px 5px 3px blue;">『それは、未来を取り戻す物語。』</h1>
+        <img src="img/FGO.png" class=" img-round center-block">
+        <h1>『それは、未来を取り戻す物語。』</h1>
     </div>
-    <div id="Story" class="container-fluid text-center" >
+    <div id="Story" class="container-fluid" >
         <div class="col-sm-3"></div>
         <div id="1" class="col-sm-6">
             <h1 style="color:white">Story</h1>
@@ -206,7 +225,7 @@
 
     </div>
 
-    <div id="NewStory" class="container-fluid  text-center  " >
+    <div id="NewStory" class="container-fluid" >
         <div class="row" >
             <div class="col-sm-1 "></div>
             <div class="col-sm-5">
@@ -320,7 +339,7 @@
 
 
 
-    <div id="Staff" class="container-fluid text-center" >
+    <div id="Staff" class="container-fluid " >
 
         <h1 style="padding-bottom:40px">Staff</h1>
 
