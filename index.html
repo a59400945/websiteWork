@@ -12,13 +12,13 @@
     <script>
         //滑鼠挪上後，圖片放大、縮小
         $(document).ready(function () {
-            $("img#aa").mouseenter(function () {
+            $("img#picSpecial").mouseenter(function () {
                 $(this).stop(true).animate({
                     opacity: '0.5',
                     width: '510'
                 });
             });
-            $("img#aa").mouseleave(function () {
+            $("img#picSpecial").mouseleave(function () {
                 $(this).stop(true).animate({
                     opacity: '1.0',
                     width: '500'
@@ -188,7 +188,7 @@
             <div class="col-sm-1 "></div>
             <div class="col-sm-5">
                 <a target="_blank" href="https://www.fate-go.jp/world/eor/">
-                    <img id="aa" src="img/FGO1.5.png" title="" width="500" />
+                    <img id="picSpecial" src="img/FGO1.5.png" title="" width="500" />
                 </a>
             </div>
             <div id="1_5" class="col-sm-5">
@@ -229,7 +229,7 @@
                 </div>
                 <div class="col-sm-5">
                     <a target="_blank" href="https://www.fate-go.jp/world/cil/">
-                        <img id="aa" src="img/FGO2.jpg" title="" width="500" />
+                        <img id="picSpecial" src="img/FGO2.jpg" title="" width="500" />
                     </a>
                 </div>
                 <div class="col-sm-1"></div>
