@@ -13,13 +13,13 @@
         //滑鼠挪上後，圖片放大、縮小
         $(document).ready(function () {
             $("img#aa").mouseenter(function () {
-                $(this).animate({
+                $(this).stop(true).animate({
                     opacity: '0.5',
                     width: '510'
                 });
             });
             $("img#aa").mouseleave(function () {
-                $(this).animate({
+                $(this).stop(true).animate({
                     opacity: '1.0',
                     width: '500'
                 });
